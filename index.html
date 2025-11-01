@@ -24,15 +24,36 @@
       font-size: 2em;
       margin-bottom: 1em;
     }
-    a {
-      color: #1a0dab;
-      text-decoration: none;
-      font-size: 1em;
-      margin: 0 0.5em;
-    }
     .info {
       font-size: 1.2em;
       margin-bottom: 2em;
+    }
+    .links {
+      margin: 2em 0;
+      text-align: left;
+    }
+    .link-block {
+      margin-bottom: 1.5em;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 1em;
+    }
+    .link-block:last-child {
+      border-bottom: none;
+    }
+    .link-title {
+      font-size: 1.1em;
+      font-weight: 500;
+      margin-bottom: 0.2em;
+    }
+    .link-desc {
+      font-size: 0.98em;
+      color: #555;
+      margin-bottom: 0.4em;
+    }
+    a {
+      color: #1a0dab;
+      text-decoration: none;
+      font-size: 0.98em;
     }
   </style>
 </head>
@@ -40,13 +61,25 @@
   <div class="container">
     <h1>Alpine Fairways Holdings Inc.</h1>
     <div class="info">
-      A private holding company based in St. John's, Newfoundland & Labrador.
+      A private firm based in St. John's, Newfoundland & Labrador, Canada.
     </div>
-    <nav>
-      <a href="#">Dummy Link 1</a>
-      <a href="#">Dummy Link 2</a>
-      <a href="#">Dummy Link 3</a>
-    </nav>
+    <div class="links">
+      <div class="link-block">
+        <div class="link-title"><a href="https://properdrop.alpinefairways.ca">Proper Drop - Rate your Guinness</a></div>
+        <div class="link-desc">A web application developed and owned by the company that allows for users to rate pints of Guinness at their favourite bars and pubs.</div>
+      </div>
+      <div class="link-block">
+        <div class="link-title"><a href="#">Cheeseburger Realty</a></div>
+        <div class="link-desc">Alpine Fairways' interest in <i>Cheeseburger Realty</i>, a privately-owned real estate investment firm.</div>
+      </div>
+      <!-- Add more link-blocks as needed -->
+    </div>
+    <div style="margin-top:2.5em; padding:1.2em; background:#f9f9f9; border-radius:7px; text-align:center;">
+      <strong>Contact</strong><br>
+      <a href="mailto:matt@alpinefairways.ca">matt@alpinefairways.ca</a>
+      <br>
+      <span style="font-size:0.95em; color:#555;">For enquiries about our holdings, partnerships, or investment opportunities.</span>
+    </div>    
     <div style="margin-top:2em;font-size:0.95em; color:#555;">
       &copy; 2025 Alpine Fairways Holdings Inc.
     </div>
