@@ -9,20 +9,35 @@
   <meta property="og:description" content="An independent holding company in St. John's, Newfoundland &amp; Labrador. Home of Alpine Fairways Golf &amp; Ski Club and Proper Drop.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://alpinefairways.ca/">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a2e22'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='15' fill='%23f4f1e8' text-anchor='middle'%3EAF%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect x='2' y='2' width='116' height='116' rx='8' fill='%231B275C'/%3E%3Crect x='9' y='9' width='102' height='102' rx='5' fill='none' stroke='%23B8964C' stroke-width='1.25'/%3E%3Ctext x='60' y='82' text-anchor='middle' font-family='Georgia,serif' font-size='62' font-weight='500' fill='%23F5F0E8'%3EAF%3C/text%3E%3Cpath d='M40 92 Q60 87 80 93' stroke='%23B8964C' stroke-width='1.5' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Jost:ital,wght@0,400;0,500;0,600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --ink: #1a2e22;
-      --paper: #f7f5ef;
-      --muted: #6b7267;
-      --line: #ddd8c9;
-      --accent: #2e5540;
+      /* AFGSC brand core */
+      --club-navy: #1B275C;
+      --fairway-green: #1A5C38;
+      --slate: #4A5A6B;
+      --warm-cream: #F5F0E8;
+      --aged-gold: #B8964C;
+
+      --cream-50: #FBF8F2;
+      --cream-200: #EAE2D4;
+      --ink-900: #1C2127;
+
+      --font-display: 'Newsreader', Georgia, 'Times New Roman', serif;
+      --font-sans: 'Jost', 'Futura', 'Century Gothic', system-ui, sans-serif;
+
+      --border-hair: rgba(28, 33, 39, 0.10);
+      --shadow-lg: 0 12px 32px rgba(20, 28, 69, 0.12), 0 4px 10px rgba(28, 33, 39, 0.06);
+      --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: var(--paper);
-      color: var(--ink);
-      font-family: Georgia, 'Times New Roman', serif;
+      background: var(--warm-cream);
+      color: var(--ink-900);
+      font-family: var(--font-display);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
@@ -32,72 +47,89 @@
       padding: 96px 24px 64px;
     }
     header p.kicker {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      font-family: var(--font-sans);
       font-size: 12px;
-      letter-spacing: 0.18em;
+      font-weight: 500;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: var(--slate);
       margin-bottom: 16px;
     }
     h1 {
       font-size: clamp(28px, 5vw, 40px);
-      font-weight: 400;
+      font-weight: 500;
       letter-spacing: -0.01em;
+      color: var(--club-navy);
       margin-bottom: 12px;
     }
     header p.sub {
-      color: var(--muted);
+      font-family: var(--font-sans);
+      color: var(--slate);
       font-size: 17px;
       max-width: 46ch;
     }
     hr {
       border: none;
-      border-top: 1px solid var(--line);
+      border-top: 1px solid var(--border-hair);
       margin: 56px 0;
     }
     h2 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      font-family: var(--font-sans);
       font-size: 12px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
       font-weight: 600;
-      color: var(--muted);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--aged-gold);
       margin-bottom: 28px;
     }
     .venture {
       display: block;
       text-decoration: none;
       color: inherit;
-      border: 1px solid var(--line);
-      border-radius: 8px;
+      border: 1px solid var(--border-hair);
+      border-radius: 6px;
       padding: 24px 28px;
       margin-bottom: 16px;
-      background: #fffefb;
-      transition: border-color 0.15s ease;
+      background: var(--cream-50);
+      transition: border-color 200ms var(--ease-out), transform 200ms var(--ease-out), box-shadow 200ms var(--ease-out);
     }
-    .venture:hover { border-color: var(--accent); }
+    .venture:hover {
+      border-color: var(--aged-gold);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
     .venture h3 {
+      font-weight: 500;
       font-size: 20px;
-      font-weight: 400;
+      color: var(--club-navy);
       margin-bottom: 6px;
     }
     .venture p {
-      color: var(--muted);
+      font-family: var(--font-sans);
+      color: var(--slate);
       font-size: 15px;
       margin-bottom: 10px;
     }
     .venture span {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-      font-size: 13px;
-      color: var(--accent);
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--fairway-green);
     }
-    .contact p { color: var(--muted); font-size: 16px; }
-    .contact a { color: var(--accent); }
+    .contact p {
+      font-family: var(--font-sans);
+      color: var(--slate);
+      font-size: 16px;
+    }
+    .contact a { color: var(--fairway-green); }
     footer {
       margin-top: 72px;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-      font-size: 13px;
-      color: var(--muted);
+      font-family: var(--font-sans);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: var(--slate);
     }
   </style>
 </head>
@@ -106,7 +138,7 @@
     <header>
       <p class="kicker">St. John's · Newfoundland &amp; Labrador</p>
       <h1>Alpine Fairways Holdings Inc.</h1>
-      <p class="sub">An independent holding company. We build small brands and software, and run them properly.</p>
+      <p class="sub">An independent holding company. We build and run small brands and software applications.</p>
     </header>
 
     <hr>
@@ -124,7 +156,7 @@
         <span>properdrop.ca →</span>
       </a>
       <a class="venture" href="https://trivia.alpinefairways.ca">
-        <h3>Alpine Fairways Trivia</h3>
+        <h3>Game Night Trivia</h3>
         <p>A Jeopardy-style trivia game. Pick a category, buzz in, test your knowledge.</p>
         <span>trivia.alpinefairways.ca →</span>
       </a>
