@@ -1,4 +1,1 @@
-# ads.txt for alpinefairways.ca
-# Placeholder: AdSense has not issued a publisher ID for this site yet.
-# When it does, replace the comment below with the line AdSense gives you, e.g.
-#   google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+google.com, pub-6194876684393813, DIRECT, f08c47fec0942fa0
