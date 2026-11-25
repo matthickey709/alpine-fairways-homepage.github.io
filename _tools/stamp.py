@@ -24,7 +24,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = "https://alpinefairways.ca"
 
 NAV = [
-    ("/games/", "Ventures"),
+    ("/ventures/", "Ventures"),
     ("/notes/", "Notes"),
     ("/about/", "About"),
     ("/contact/", "Contact"),
@@ -47,7 +47,7 @@ FOOTER = """<footer class="site-footer">
           <h2>Site</h2>
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/games/">Ventures</a></li>
+            <li><a href="/ventures/">Ventures</a></li>
             <li><a href="/notes/">Notes</a></li>
             <li><a href="/about/">About</a></li>
             <li><a href="/contact/">Contact</a></li>
@@ -89,7 +89,7 @@ def url_path(page: pathlib.Path) -> str:
 def section_of(path: str) -> str | None:
     """Which top-level nav item a page belongs to."""
     if path in ("/game-night-trivia.html", "/proper-drop.html"):
-        return "/games/"
+        return "/ventures/"
     for href, _ in NAV:
         if path.startswith(href):
             return href
