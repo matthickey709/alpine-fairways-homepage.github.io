@@ -220,3 +220,8 @@ a.venture:hover { border-color: var(--aged-gold); transform: translateY(-2px); b
 
 .note-list--flush { margin-top: 0; }
 .after-list { margin-top: 20px; }
+
+@media (max-width: 400px) {
+  .site-nav { margin-right: -6px; }
+  .site-nav a { padding: 12px 6px; letter-spacing: 0.03em; }
+}
