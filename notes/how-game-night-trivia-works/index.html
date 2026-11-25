@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How Game Night Trivia Works — Alpine Fairways Notes</title>
+  <meta name="description" content="How to host Game Night Trivia: the display, host, and player screens, judging answers and partial credit, Final Jeopardy wagers, team mode, and writing a board in a spreadsheet.">
+  <link rel="canonical" href="https://alpinefairways.ca/notes/how-game-night-trivia-works/">
+  <meta property="og:title" content="How Game Night Trivia Works">
+  <meta property="og:description" content="The three screens, how judging works, and how to write a board ahead of time.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://alpinefairways.ca/notes/how-game-night-trivia-works/">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Jost:ital,wght@0,400;0,500;0,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <!-- site-header:start -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="/"><img src="/assets/favicon.svg" alt="" width="28" height="28">Alpine Fairways</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="/games/">Games</a>
+        <a href="/notes/" aria-current="true">Notes</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <!-- site-header:end -->
+
+  <main id="main" class="wrap">
+    <article>
+      <header class="page-header">
+        <p class="kicker"><a href="/notes/">Notes</a> · Game Night Trivia</p>
+        <h1>How Game Night Trivia Works</h1>
+        <p class="sub">Three screens, one host, and everyone answering from their phone.</p>
+      </header>
+
+      <div class="prose">
+        <p><a href="/game-night-trivia.html">Game Night Trivia</a> is a Jeopardy-style game built for a room full of people: the board goes up on a TV, the host runs it from a laptop, and contestants play on their phones. Nobody has to install anything. Here's how a night goes.</p>
+
+        <h2>The three screens</h2>
+        <p>Every game has a short code, and three views that share it:</p>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr><th scope="col">View</th><th scope="col">Who sees it</th><th scope="col">What it's for</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Display</strong></td><td>Everyone</td><td>Put it on the TV or share it on a video call. It shows the board, the join QR code, reveals, and scores, and never shows a correct answer early.</td></tr>
+              <tr><td><strong>Host</strong></td><td>The host only</td><td>Pick clues, watch answers stream in, and judge them. Keep it private: it shows the answers.</td></tr>
+              <tr><td><strong>Play</strong></td><td>Contestants' phones</td><td>Join the game, type answers, and place wagers.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Running a game</h2>
+        <ol>
+          <li><strong>Set up.</strong> Sign in with Google on the home page, create a board or import one, and press Start game.</li>
+          <li><strong>Get people in.</strong> Open the display view in a second tab and put it on the big screen. Contestants scan the QR code to join.</li>
+          <li><strong>Play a clue.</strong> Click a clue on the host view and read it aloud. Answers arrive as people type them.</li>
+          <li><strong>Judge.</strong> Mark each answer right (plus the clue's value), wrong (minus the value), zero, or a custom amount for partial credit. Then reveal the results to the room.</li>
+          <li><strong>Keep going.</strong> Move on to Double Jeopardy and Final Jeopardy if your board has them. Both are optional.</li>
+        </ol>
+        <p>If you'd rather judge from the couch than the laptop, the host view has a <em>Control from phone</em> option: scan its QR code and your phone becomes the controller while the laptop keeps showing the board. That QR code carries the host key, so keep it to yourself.</p>
+
+        <h2>Judging, not buzzing</h2>
+        <p>There's no buzzer race. Everyone answers every clue, and the host decides what counts. That's the part that makes it work at a party: "Bonaparte" for "Napoleon" can get full marks, a half-right answer can get half the points, and the host settles every argument. Scores can be adjusted by hand at any time, and a clue that was judged too quickly can be reopened, which undoes its scoring.</p>
+
+        <h2>Final Jeopardy</h2>
+        <p>In Final Jeopardy each contestant secretly wagers before seeing the clue. You can bet anything from zero up to your score, or up to 500 if your score is lower than that, so a player who's behind still has something to play for.</p>
+
+        <h2>Team mode</h2>
+        <p>Switch on team mode from the host sidebar, before the game or partway through. The host can assign people to teams, or let players pick their own team on their phones. Everyone is still judged individually, and the scoreboard shows each team's total with its members listed underneath. Final Jeopardy wagers stay per player.</p>
+
+        <h2>Writing a board ahead of time</h2>
+        <p>You can build a board in the in-app editor, which saves as you type, so it's fine to leave a draft half-finished. Or draft it in a spreadsheet with five columns:</p>
+        <ul>
+          <li><strong>round</strong>: <code>jeopardy</code>, <code>double</code>, or <code>final</code></li>
+          <li><strong>category</strong></li>
+          <li><strong>value</strong>: leave it blank to fill in 200 to 1000 automatically (doubled in the double round)</li>
+          <li><strong>clue</strong></li>
+          <li><strong>answer</strong></li>
+        </ul>
+        <p>Export the sheet as CSV and import it from the home page. A sample template is available there to download. In the editor you can drag a category to move the whole column, or drag one clue onto another to swap them. Point values belong to the row, so a clue dragged down to the bottom row becomes the 1000-point clue.</p>
+
+        <h2>Sharing a board</h2>
+        <p>The Share button creates a read-only link. Anyone with it can see the title, categories, and values, and reveal the clues if they choose. Answers are never shown. Anyone signed in can copy the board into their own account and edit their copy; nobody can change your original. Stop sharing turns the link off for good.</p>
+
+        <h2>Small things that help</h2>
+        <ul>
+          <li>Phones that lock or drop signal reconnect automatically when the page is reopened.</li>
+          <li>Your boards are saved to your Google account, so you can write one on one device and host it from another.</li>
+          <li>A game expires 12 hours after its last activity, so nobody gets stuck in last week's lobby.</li>
+        </ul>
+
+        <div class="cta">
+          <p>Got a board in mind? Start one.</p>
+          <a class="btn" href="https://trivia.alpinefairways.ca">Play Game Night Trivia →</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- site-footer:start -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="footer-cols">
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/games/">Games</a></li>
+            <li><a href="/notes/">Notes</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Ventures</h2>
+          <ul>
+            <li><a href="/game-night-trivia.html">Game Night Trivia</a></li>
+            <li><a href="/proper-drop.html">Proper Drop</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="/terms/">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-legal">&copy; 2026 Alpine Fairways Holdings Inc. &middot; St. John&rsquo;s, Newfoundland &amp; Labrador</p>
+    </div>
+  </footer>
+  <!-- site-footer:end -->
+</body>
+</html>

@@ -1,0 +1,222 @@
+/* Alpine Fairways Holdings — shared site styles (AFGSC design system) */
+:root {
+  --club-navy: #1B275C;
+  --fairway-green: #1A5C38;
+  --slate: #4A5A6B;
+  --warm-cream: #F5F0E8;
+  --aged-gold: #B8964C;
+  --gold-text: #8A6D2E; /* gold dark enough for small text on cream */
+
+  --cream-50: #FBF8F2;
+  --cream-200: #EAE2D4;
+  --ink-900: #1C2127;
+
+  --font-display: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Jost', 'Futura', 'Century Gothic', system-ui, sans-serif;
+
+  --border-hair: rgba(28, 33, 39, 0.10);
+  --shadow-lg: 0 12px 32px rgba(20, 28, 69, 0.12), 0 4px 10px rgba(28, 33, 39, 0.06);
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--warm-cream);
+  color: var(--ink-900);
+  font-family: var(--font-display);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--fairway-green); }
+a:hover { color: var(--club-navy); }
+:focus-visible { outline: 2px solid var(--aged-gold); outline-offset: 2px; }
+
+.skip-link {
+  position: absolute; left: -9999px; top: 0;
+  background: var(--club-navy); color: var(--warm-cream);
+  padding: 8px 16px; font-family: var(--font-sans); z-index: 10;
+}
+.skip-link:focus { left: 16px; top: 16px; }
+
+/* ---------- Site header ---------- */
+.site-header { border-bottom: 1px solid var(--border-hair); background: var(--warm-cream); }
+.site-header__inner {
+  max-width: 880px; margin: 0 auto; padding: 14px 20px;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 8px 24px;
+}
+.brand {
+  display: inline-flex; align-items: center; gap: 10px;
+  text-decoration: none; color: var(--club-navy);
+  font-family: var(--font-display); font-size: 18px; font-weight: 500;
+  min-height: 44px;
+}
+.brand img { width: 28px; height: 28px; }
+.site-nav { display: flex; flex-wrap: wrap; gap: 0 4px; margin-right: -10px; }
+.site-nav a {
+  font-family: var(--font-sans); font-size: 13px; font-weight: 500;
+  letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none;
+  color: var(--slate);
+  padding: 12px 10px; min-height: 44px; display: inline-flex; align-items: center;
+  border-bottom: 2px solid transparent;
+  transition: color 200ms var(--ease-out), border-color 200ms var(--ease-out);
+}
+.site-nav a:hover { color: var(--club-navy); }
+.site-nav a[aria-current="page"], .site-nav a[aria-current="true"] { color: var(--club-navy); border-bottom-color: var(--aged-gold); }
+
+/* ---------- Layout ---------- */
+.wrap { max-width: 640px; margin: 0 auto; padding: 64px 20px 32px; }
+.wrap--home { padding-top: 80px; }
+
+/* ---------- Page header ---------- */
+.page-header .kicker {
+  font-family: var(--font-sans); font-size: 12px; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gold-text); margin-bottom: 16px;
+}
+.page-header .kicker--slate { color: var(--slate); font-weight: 500; }
+h1 {
+  font-size: clamp(30px, 6vw, 44px); font-weight: 500; line-height: 1.2;
+  letter-spacing: -0.01em; color: var(--club-navy); margin-bottom: 14px;
+}
+.wrap--home h1 { font-size: clamp(28px, 5vw, 40px); margin-bottom: 12px; }
+.page-header .sub {
+  font-family: var(--font-sans); color: var(--slate);
+  font-size: 18px; max-width: 46ch;
+}
+.wrap--home .page-header .sub { font-size: 17px; }
+.meta {
+  font-family: var(--font-sans); font-size: 14px; color: var(--slate); margin-top: 8px;
+}
+
+hr { border: none; border-top: 1px solid var(--border-hair); margin: 56px 0; }
+
+.section-label {
+  font-family: var(--font-sans); font-size: 12px; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gold-text); margin-bottom: 28px;
+}
+
+/* ---------- Cards ---------- */
+.venture {
+  display: block; text-decoration: none; color: inherit;
+  border: 1px solid var(--border-hair); border-radius: 6px;
+  padding: 24px 28px; margin-bottom: 16px; background: var(--cream-50);
+  transition: border-color 200ms var(--ease-out), transform 200ms var(--ease-out), box-shadow 200ms var(--ease-out);
+}
+a.venture:hover { border-color: var(--aged-gold); transform: translateY(-2px); box-shadow: var(--shadow-lg); color: inherit; }
+.venture h2, .venture h3 {
+  font-family: var(--font-display); font-weight: 500; font-size: 20px;
+  color: var(--club-navy); margin-bottom: 6px; letter-spacing: 0; text-transform: none;
+}
+.venture p { font-family: var(--font-sans); color: var(--slate); font-size: 15px; margin-bottom: 10px; }
+.venture .more, .venture span.more {
+  font-family: var(--font-sans); font-weight: 500; font-size: 12px;
+  letter-spacing: 0.04em; text-transform: uppercase; color: var(--fairway-green);
+}
+.card-links { display: flex; flex-wrap: wrap; gap: 4px 20px; margin-top: 4px; }
+.card-links a {
+  font-family: var(--font-sans); font-weight: 500; font-size: 13px;
+  letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none;
+  color: var(--fairway-green); padding: 10px 0; display: inline-block;
+}
+.card-links a:hover { text-decoration: underline; }
+
+.contact-line { font-family: var(--font-sans); color: var(--slate); font-size: 16px; }
+
+/* ---------- Long-form prose ---------- */
+.prose { margin-top: 40px; }
+.prose h2 {
+  font-family: var(--font-display); font-size: 24px; font-weight: 600; line-height: 1.3;
+  color: var(--club-navy); margin: 44px 0 12px;
+}
+.prose h3 {
+  font-family: var(--font-display); font-size: 20px; font-weight: 600;
+  color: var(--club-navy); margin: 32px 0 8px;
+}
+.prose p, .prose li { font-size: 18px; }
+.prose p { margin-bottom: 20px; }
+.prose ul, .prose ol { margin: 0 0 20px 1.3em; }
+.prose li { margin-bottom: 8px; }
+.prose li::marker { color: var(--aged-gold); }
+.prose strong { font-weight: 600; }
+.prose .aside { font-family: var(--font-sans); font-size: 15px; color: var(--slate); }
+.prose table { width: 100%; border-collapse: collapse; margin: 0 0 24px; font-family: var(--font-sans); font-size: 15px; }
+.prose th, .prose td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--border-hair); vertical-align: top; }
+.prose th { color: var(--club-navy); font-weight: 600; }
+.table-scroll { overflow-x: auto; }
+
+.callout {
+  background: var(--cream-50); border: 1px solid var(--border-hair);
+  border-left: 3px solid var(--aged-gold); border-radius: 6px;
+  padding: 20px 24px; margin: 28px 0;
+}
+.callout p:last-child { margin-bottom: 0; }
+.callout .rank {
+  font-family: var(--font-sans); font-size: 13px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-text);
+}
+
+.photo { margin: 40px 0; }
+.photo img { border-radius: 6px; border: 1px solid var(--border-hair); margin: 0 auto; max-height: 640px; width: auto; }
+.photo figcaption { font-family: var(--font-sans); font-size: 14px; color: var(--slate); text-align: center; margin-top: 10px; }
+
+/* ---------- Notes list ---------- */
+.note-list { list-style: none; margin: 40px 0 0; padding: 0; }
+.note-list li { border-top: 1px solid var(--border-hair); padding: 28px 0; }
+.note-list li:last-child { border-bottom: 1px solid var(--border-hair); }
+.note-list h2, .note-list h3 { font-family: var(--font-display); font-size: 22px; font-weight: 500; line-height: 1.3; margin-bottom: 6px; }
+.note-list h2 a, .note-list h3 a { color: var(--club-navy); text-decoration: none; display: inline-block; padding: 4px 0; }
+.note-list h2 a:hover, .note-list h3 a:hover { color: var(--fairway-green); text-decoration: underline; }
+.note-list p { font-family: var(--font-sans); font-size: 15px; color: var(--slate); }
+.note-list .meta { margin: 0 0 6px; font-size: 13px; }
+
+/* ---------- CTA ---------- */
+.cta {
+  margin: 48px 0 8px; padding: 32px 24px;
+  background: var(--club-navy); border-radius: 8px; text-align: center;
+}
+.cta p { font-family: var(--font-sans); color: var(--cream-200); font-size: 15px; margin-bottom: 20px; }
+.btn {
+  display: inline-block; font-family: var(--font-sans); font-weight: 600;
+  font-size: 14px; letter-spacing: 0.04em; text-decoration: none;
+  color: var(--club-navy); background: var(--aged-gold);
+  padding: 14px 28px; border-radius: 4px;
+  transition: transform 200ms var(--ease-out), background 200ms var(--ease-out);
+}
+.btn:hover { transform: translateY(-2px); background: #C9A65C; color: var(--club-navy); }
+
+/* ---------- Site footer ---------- */
+.site-footer { margin-top: 72px; border-top: 1px solid var(--border-hair); background: var(--cream-50); }
+.site-footer__inner {
+  max-width: 880px; margin: 0 auto; padding: 40px 20px 48px;
+  font-family: var(--font-sans); font-size: 14px; color: var(--slate);
+}
+.footer-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-bottom: 32px; }
+.footer-cols h2 {
+  font-family: var(--font-sans); font-size: 12px; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-text); margin-bottom: 8px;
+}
+.footer-cols ul { list-style: none; }
+.footer-cols a { color: var(--slate); text-decoration: none; display: inline-block; padding: 6px 0; }
+.footer-cols a:hover { color: var(--club-navy); text-decoration: underline; }
+.footer-legal { font-size: 12px; letter-spacing: 0.04em; }
+
+@media (max-width: 560px) {
+  .wrap { padding-top: 40px; }
+  .wrap--home { padding-top: 48px; }
+  .venture { padding: 20px; }
+  .footer-cols { grid-template-columns: 1fr 1fr; }
+  .prose p, .prose li { font-size: 17px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+  a.venture:hover, .btn:hover { transform: none; }
+}
+
+.note-list--flush { margin-top: 0; }
+.after-list { margin-top: 20px; }

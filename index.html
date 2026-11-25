@@ -2,174 +2,119 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Alpine Fairways Holdings Inc.</title>
-  <meta name="description" content="Alpine Fairways Holdings Inc. — an independent holding company in St. John's, Newfoundland &amp; Labrador. Home of Alpine Fairways Golf &amp; Ski Club and Proper Drop.">
+  <meta name="description" content="Alpine Fairways Holdings Inc. is an independent holding company in St. John's, Newfoundland &amp; Labrador. Home of Game Night Trivia and Proper Drop.">
+  <link rel="canonical" href="https://alpinefairways.ca/">
   <meta property="og:title" content="Alpine Fairways Holdings Inc.">
-  <meta property="og:description" content="An independent holding company in St. John's, Newfoundland &amp; Labrador. Home of Alpine Fairways Golf &amp; Ski Club and Proper Drop.">
+  <meta property="og:description" content="An independent holding company in St. John's, Newfoundland &amp; Labrador. Home of Game Night Trivia and Proper Drop.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://alpinefairways.ca/">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect x='2' y='2' width='116' height='116' rx='8' fill='%231B275C'/%3E%3Crect x='9' y='9' width='102' height='102' rx='5' fill='none' stroke='%23B8964C' stroke-width='1.25'/%3E%3Ctext x='60' y='82' text-anchor='middle' font-family='Georgia,serif' font-size='62' font-weight='500' fill='%23F5F0E8'%3EAF%3C/text%3E%3Cpath d='M40 92 Q60 87 80 93' stroke='%23B8964C' stroke-width='1.5' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Jost:ital,wght@0,400;0,500;0,600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      /* AFGSC brand core */
-      --club-navy: #1B275C;
-      --fairway-green: #1A5C38;
-      --slate: #4A5A6B;
-      --warm-cream: #F5F0E8;
-      --aged-gold: #B8964C;
-
-      --cream-50: #FBF8F2;
-      --cream-200: #EAE2D4;
-      --ink-900: #1C2127;
-
-      --font-display: 'Newsreader', Georgia, 'Times New Roman', serif;
-      --font-sans: 'Jost', 'Futura', 'Century Gothic', system-ui, sans-serif;
-
-      --border-hair: rgba(28, 33, 39, 0.10);
-      --shadow-lg: 0 12px 32px rgba(20, 28, 69, 0.12), 0 4px 10px rgba(28, 33, 39, 0.06);
-      --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background: var(--warm-cream);
-      color: var(--ink-900);
-      font-family: var(--font-display);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    .wrap {
-      max-width: 640px;
-      margin: 0 auto;
-      padding: 96px 24px 64px;
-    }
-    header p.kicker {
-      font-family: var(--font-sans);
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--slate);
-      margin-bottom: 16px;
-    }
-    h1 {
-      font-size: clamp(28px, 5vw, 40px);
-      font-weight: 500;
-      letter-spacing: -0.01em;
-      color: var(--club-navy);
-      margin-bottom: 12px;
-    }
-    header p.sub {
-      font-family: var(--font-sans);
-      color: var(--slate);
-      font-size: 17px;
-      max-width: 46ch;
-    }
-    hr {
-      border: none;
-      border-top: 1px solid var(--border-hair);
-      margin: 56px 0;
-    }
-    h2 {
-      font-family: var(--font-sans);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--aged-gold);
-      margin-bottom: 28px;
-    }
-    .venture {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      border: 1px solid var(--border-hair);
-      border-radius: 6px;
-      padding: 24px 28px;
-      margin-bottom: 16px;
-      background: var(--cream-50);
-      transition: border-color 200ms var(--ease-out), transform 200ms var(--ease-out), box-shadow 200ms var(--ease-out);
-    }
-    .venture:hover {
-      border-color: var(--aged-gold);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
-    }
-    .venture h3 {
-      font-weight: 500;
-      font-size: 20px;
-      color: var(--club-navy);
-      margin-bottom: 6px;
-    }
-    .venture p {
-      font-family: var(--font-sans);
-      color: var(--slate);
-      font-size: 15px;
-      margin-bottom: 10px;
-    }
-    .venture span {
-      font-family: var(--font-sans);
-      font-weight: 500;
-      font-size: 12px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--fairway-green);
-    }
-    .contact p {
-      font-family: var(--font-sans);
-      color: var(--slate);
-      font-size: 16px;
-    }
-    .contact a { color: var(--fairway-green); }
-    footer {
-      margin-top: 72px;
-      font-family: var(--font-sans);
-      font-size: 12px;
-      letter-spacing: 0.04em;
-      color: var(--slate);
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <p class="kicker">St. John's · Newfoundland &amp; Labrador</p>
+  <!-- site-header:start -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="/"><img src="/assets/favicon.svg" alt="" width="28" height="28">Alpine Fairways</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="/games/">Games</a>
+        <a href="/notes/">Notes</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <!-- site-header:end -->
+
+  <main id="main" class="wrap wrap--home">
+    <header class="page-header">
+      <p class="kicker kicker--slate">St. John's · Newfoundland &amp; Labrador</p>
       <h1>Alpine Fairways Holdings Inc.</h1>
       <p class="sub">An independent holding company. We build and run small brands and software applications.</p>
     </header>
 
     <hr>
 
-    <section>
-      <h2>Ventures</h2>
-      <a class="venture" href="https://shop.alpinefairways.ca">
-        <h3>Alpine Fairways Golf &amp; Ski Club</h3>
-        <p>Apparel and gear for people who play both seasons. Sea to summit.</p>
-        <span>shop.alpinefairways.ca →</span>
-      </a>
-      <a class="venture" href="https://properdrop.ca">
+    <section aria-labelledby="ventures">
+      <h2 class="section-label" id="ventures">Ventures</h2>
+      <a class="venture" href="/proper-drop.html">
         <h3>Proper Drop</h3>
         <p>Rate pints of Guinness at your favourite bars and pubs.</p>
-        <span>properdrop.ca →</span>
+        <span class="more">Learn more →</span>
       </a>
-      <a class="venture" href="https://trivia.alpinefairways.ca">
+      <a class="venture" href="/game-night-trivia.html">
         <h3>Game Night Trivia</h3>
-        <p>A Jeopardy-style trivia game. Pick a category, buzz in, test your knowledge.</p>
-        <span>trivia.alpinefairways.ca →</span>
+        <p>A Jeopardy-style trivia game. The host runs the board, everyone answers from their phone.</p>
+        <span class="more">Learn more →</span>
       </a>
+      <p class="contact-line after-list">Previously: Alpine Fairways Golf &amp; Ski Club, an apparel line for people who play both seasons. It has since wound down.</p>
     </section>
 
     <hr>
 
-    <section class="contact">
-      <h2>Contact</h2>
-      <p>matt[at]alpinefairways.ca</p>
+    <section aria-labelledby="latest-notes">
+      <h2 class="section-label" id="latest-notes">Notes</h2>
+      <ul class="note-list note-list--flush">
+        <li>
+          <p class="meta">How it works</p>
+          <h3><a href="/notes/how-game-night-trivia-works/">How Game Night Trivia works</a></h3>
+          <p>The three screens, how judging works, and how to write a board ahead of time.</p>
+        </li>
+        <li>
+          <p class="meta">November 29, 2025</p>
+          <h3><a href="/notes/proper-drop-guinness-tour/">The inaugural St. John's Guinness tour</a></h3>
+          <p>Eight bars, one rating app, and the pub crawl that started Proper Drop.</p>
+        </li>
+      </ul>
+      <p class="contact-line after-list"><a href="/notes/">All notes →</a></p>
     </section>
 
-    <footer>© 2026 Alpine Fairways Holdings Inc.</footer>
-  </div>
+    <hr>
+
+    <section aria-labelledby="contact">
+      <h2 class="section-label" id="contact">Contact</h2>
+      <p class="contact-line">matt[at]alpinefairways.ca · <a href="/contact/">More ways to get in touch</a></p>
+    </section>
+  </main>
+
+  <!-- site-footer:start -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="footer-cols">
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/games/">Games</a></li>
+            <li><a href="/notes/">Notes</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Ventures</h2>
+          <ul>
+            <li><a href="/game-night-trivia.html">Game Night Trivia</a></li>
+            <li><a href="/proper-drop.html">Proper Drop</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="/terms/">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-legal">&copy; 2026 Alpine Fairways Holdings Inc. &middot; St. John&rsquo;s, Newfoundland &amp; Labrador</p>
+    </div>
+  </footer>
+  <!-- site-footer:end -->
 </body>
 </html>
